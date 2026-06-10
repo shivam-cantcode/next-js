@@ -67,7 +67,10 @@ export default function LoginPage() {
       >
         Login here
       </button>
-      <Link href="/signup">Visit signup page</Link>
+      <div className="flex gap-4">
+        <Link href="/forgot-password">Forgot Password?</Link>
+        <Link href="/signup">Visit signup page</Link>
+      </div>
     </div>
   );
 }
