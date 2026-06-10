@@ -9,7 +9,7 @@ connect();
 export async function GET(request: NextRequest) {
   try {
     const userId = await getDatafromToekn(request);
-    const user = await User.findById(userId).select("-password");
+    const user = await User.findById({ _id: userId }).select("-password ");
     return NextResponse.json({
       message: "User fetched successfully",
       success: true,
